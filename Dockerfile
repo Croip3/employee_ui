@@ -1,2 +1,7 @@
-FROM httpd:2.4
-RUN echo "hello world" > /usr/local/apache2/htdocs/index.html
+FROM nginx:alpine
+
+COPY . /usr/share/nginx/html
+
+
+EXPOSE 3000
+EXPOSE 8080

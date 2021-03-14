@@ -9,10 +9,10 @@ This project was created in the Relaxdays Code Challenge Vol. 1. See https://sit
 You can get a running version of this code by using:
 
 ```bash
-git clone https://github.com/LukasKaufmannRelaxdays/hackathon-example-submission.git
+git clone https://github.com/Croip3/employee_ui.git
 cd employee_ui
 docker build -t employeeui .
-docker run -v $(pwd):/app -p 8080:80 -it employeeui
+docker run -p 3000:80 employeeui
 ```
 
-If you now access http://127.0.0.1:8080/ you should see the thing you want to review.
+If you now access http://127.0.0.1:3000/ you should see the thing you want to review.
