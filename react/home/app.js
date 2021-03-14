@@ -73,7 +73,9 @@ const Ticket = ({ title }) => {
     return (
         <div className="ticket">
             <p className="ticket-title">{title}</p>
-            <div className="ticket-progress"></div>
+            <div className="ticket-progress">
+                <div></div>
+            </div>
         </div>
     );
 };
@@ -107,19 +109,33 @@ const Content = () => {
                     <div id="all-tickets">
                         <div className="status">
                             <p className="status-header">New Tickets</p>
-                            <Ticket />
-                            <Ticket />
-                            <Ticket />
+                            <Ticket title="Bsp. Ticket" />
+                            <Ticket title="Bsp. Ticket" />
+                            <Ticket title="Bsp. Ticket" />
                         </div>
 
-                        <div className="status">
+                        <div className="status status-borders">
                             <p className="status-header">Open Tickets</p>
-                            <Ticket />
+                            <div className="ticket">
+                                <p className="ticket-title">
+                                    Bsp offenes Ticket
+                                </p>
+                                <div className="ticket-progress">
+                                    <div className="width50"></div>
+                                </div>
+                            </div>
                         </div>
 
                         <div className="status">
                             <p className="status-header">Closed Tickets</p>
-                            <Ticket />
+                            <div className="ticket">
+                                <p className="ticket-title">
+                                    Bsp fertiges Ticket
+                                </p>
+                                <div className="ticket-progress">
+                                    <div className="width100"></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
