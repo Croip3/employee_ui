@@ -89,12 +89,16 @@
 }
 
 .card_white :is(.card-header, .card-header-title) {
-    color: rgba(66, 66, 66, 0.637);
-    border-color: rgba(66, 66, 66, 0.637);
+    color: rgb(0, 199, 225);
+    border-color: rgb(0, 199, 225);
 }
 
 .card_white .card-header-space {
-    background-color: rgba(66, 66, 66, 0.637);
+    background-color: rgb(0, 199, 225);
+}
+
+.card_white .card-header-title {
+    color: black;
 }
 
 .status {
@@ -104,8 +108,13 @@
 }
 
 .status-header {
-    flex-grow: 1;
-    border-bottom: solid 1px black;
+    width: 100%;
 
-    color: black;
+    color: rgb(0, 0, 0);
+}
+
+#all-tickets {
+    display: flex;
+    flex-flow: row;
+    flex-grow: 1;
 }

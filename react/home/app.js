@@ -69,12 +69,20 @@ const CardSpace = () => {
     return <div className="card-space"></div>;
 };
 
-const Ticket = () => {};
+const Ticket = ({ title }) => {
+    return (
+        <div className="ticket">
+            <p className="ticket-title">{title}</p>
+            <div className="ticket-progress"></div>
+        </div>
+    );
+};
 
 const Status = ({ title }) => {
     return (
         <div className="status">
             <p className="staus-header">{title}</p>
+            <Ticket />
         </div>
     );
 };
@@ -85,32 +93,36 @@ const Content = () => {
             <Title title="Dashboard" />
             <div className="content-dashboard">
                 <div className="row">
-                    <Card
-                        title="Anouncement"
-                        text="safjkabdjf ajdshfkda "
-                        bg="card_red"
-                    />
+                    <Card title="Anouncements" text="" bg="card_red" />
                     <CardSpace />
-                    <Card
-                        title="Events"
-                        text="safjkabdjf ajdshfkda "
-                        bg="card_blue"
-                    />
+                    <Card title="Events" text="" bg="card_blue" />
                     <CardSpace />
-                    <Card
-                        title="Upcoming"
-                        text="safjkabdjf ajdshfkda "
-                        bg="card_blue"
-                    />
+                    <Card title="Upcoming" text="" bg="card_blue" />
                 </div>
-                <Card
-                    className="ticket-status"
-                    title="Ticket Status"
-                    text=""
-                    bg="card_white"
-                >
-                    <Status title="Open Tickets" />
-                </Card>
+                <div className="card card_white ticket-status">
+                    <div className="card-header">
+                        <div className="card-header-space"></div>
+                        <p className="card-header-title">Ticket Status</p>
+                    </div>
+                    <div id="all-tickets">
+                        <div className="status">
+                            <p className="status-header">New Tickets</p>
+                            <Ticket />
+                            <Ticket />
+                            <Ticket />
+                        </div>
+
+                        <div className="status">
+                            <p className="status-header">Open Tickets</p>
+                            <Ticket />
+                        </div>
+
+                        <div className="status">
+                            <p className="status-header">Closed Tickets</p>
+                            <Ticket />
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     );
